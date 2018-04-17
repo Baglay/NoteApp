@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="Ta6-Xe-nnl">
+            <objects>
+                <tableViewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="peB-JW-SQQ" customClass="SettingsViewController" customModule="NoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="BbA-CL-Ecq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="5O8-UQ-ghC">
+                            <rect key="frame" x="0.0" y="117.5" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPS-cy-bFY">
+                                    <rect key="frame" x="100" y="5" width="175" height="34"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Save">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="saveSettingsAction:" destination="peB-JW-SQQ" eventType="touchUpInside" id="pdK-5H-c6e"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="FPS-cy-bFY" firstAttribute="top" secondItem="5O8-UQ-ghC" secondAttribute="top" constant="5" id="2AT-JW-rZP"/>
+                                <constraint firstItem="FPS-cy-bFY" firstAttribute="leading" secondItem="5O8-UQ-ghC" secondAttribute="leading" constant="100" id="3kQ-mm-jfv"/>
+                                <constraint firstAttribute="bottom" secondItem="FPS-cy-bFY" secondAttribute="bottom" constant="5" id="EeM-Vc-7YJ"/>
+                                <constraint firstItem="FPS-cy-bFY" firstAttribute="centerX" secondItem="5O8-UQ-ghC" secondAttribute="centerX" id="Fig-aq-yCw"/>
+                                <constraint firstAttribute="trailing" secondItem="FPS-cy-bFY" secondAttribute="trailing" constant="100" id="vod-ck-v8Z"/>
+                            </constraints>
+                        </view>
+                        <sections>
+                            <tableViewSection headerTitle="Выбор хранилища" id="NQl-3j-1bd">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="YZ0-0j-Mr4">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YZ0-0j-Mr4" id="2bR-hr-tRE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uUz-Sp-TN5">
+                                                    <rect key="frame" x="5" y="5" width="365" height="34.5"/>
+                                                    <segments>
+                                                        <segment title="UserDefaults"/>
+                                                        <segment title="KeyChain"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="noteStoreAction:" destination="peB-JW-SQQ" eventType="valueChanged" id="FDv-Ye-Cz4"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uUz-Sp-TN5" firstAttribute="leading" secondItem="2bR-hr-tRE" secondAttribute="leading" constant="5" id="Evg-nG-jR8"/>
+                                                <constraint firstAttribute="bottom" secondItem="uUz-Sp-TN5" secondAttribute="bottom" constant="5" id="LbM-Xp-Isl"/>
+                                                <constraint firstAttribute="trailing" secondItem="uUz-Sp-TN5" secondAttribute="trailing" constant="5" id="X53-rM-nCU"/>
+                                                <constraint firstItem="uUz-Sp-TN5" firstAttribute="top" secondItem="2bR-hr-tRE" secondAttribute="top" constant="5" id="aFI-rx-ShX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="peB-JW-SQQ" id="wum-ug-JTP"/>
+                            <outlet property="delegate" destination="peB-JW-SQQ" id="Ulp-lG-dtb"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="noteStorageButton" destination="uUz-Sp-TN5" id="hcC-a2-VEQ"/>
+                        <outlet property="saveButton" destination="FPS-cy-bFY" id="FqE-wK-6f3"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kO7-WD-gZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-604" y="-309"/>
+        </scene>
+    </scenes>
+</document>
