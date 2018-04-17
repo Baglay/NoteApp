@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail Record View Controller-->
+        <scene sceneID="Erw-xT-Kky">
+            <objects>
+                <viewController storyboardIdentifier="DetailRecordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="trh-4q-6O4" customClass="DetailRecordViewController" customModule="NoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WfM-RN-Iqq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRP-dE-U5v">
+                                <rect key="frame" x="8" y="629" width="359" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveRecordsAction:" destination="trh-4q-6O4" eventType="touchUpInside" id="Ts4-eV-U4N"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LtT-Sr-coa">
+                                <rect key="frame" x="8" y="28" width="359" height="87"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pH-xG-T9K">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IPV-eZ-gcx">
+                                        <rect key="frame" x="0.0" y="28.5" width="359" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="trh-4q-6O4" id="qRd-Q5-ZJ1"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ce9-r5-dwV">
+                                        <rect key="frame" x="0.0" y="66.5" width="359" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата изменения" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcJ-rL-9Gi">
+                                <rect key="frame" x="8" y="123" width="375" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kw8-VZ-HGZ">
+                                <rect key="frame" x="8" y="305" width="359" height="316"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="trh-4q-6O4" id="V8i-Xf-ngz"/>
+                                </connections>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yEq-7b-Yjw">
+                                <rect key="frame" x="20" y="147" width="335" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="7uj-Ag-yfv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VRP-dE-U5v" firstAttribute="leading" secondItem="qmL-EZ-4kZ" secondAttribute="leading" constant="8" id="1gF-gM-KB4"/>
+                            <constraint firstItem="VRP-dE-U5v" firstAttribute="top" secondItem="kw8-VZ-HGZ" secondAttribute="bottom" constant="8" id="26r-el-aFt"/>
+                            <constraint firstItem="yEq-7b-Yjw" firstAttribute="top" secondItem="ZcJ-rL-9Gi" secondAttribute="bottom" constant="8" id="B4c-EA-piu"/>
+                            <constraint firstItem="LtT-Sr-coa" firstAttribute="top" secondItem="qmL-EZ-4kZ" secondAttribute="top" constant="8" id="BMf-cZ-GF9"/>
+                            <constraint firstItem="ZcJ-rL-9Gi" firstAttribute="leading" secondItem="qmL-EZ-4kZ" secondAttribute="leading" constant="8" id="DnI-Nn-m9X"/>
+                            <constraint firstItem="ZcJ-rL-9Gi" firstAttribute="top" secondItem="LtT-Sr-coa" secondAttribute="bottom" constant="8" id="LNi-SB-Il6"/>
+                            <constraint firstItem="qmL-EZ-4kZ" firstAttribute="trailing" secondItem="kw8-VZ-HGZ" secondAttribute="trailing" constant="8" id="M4K-1i-Owb"/>
+                            <constraint firstItem="kw8-VZ-HGZ" firstAttribute="leading" secondItem="qmL-EZ-4kZ" secondAttribute="leading" constant="8" id="dYN-kJ-XDU"/>
+                            <constraint firstItem="ZcJ-rL-9Gi" firstAttribute="trailing" secondItem="qmL-EZ-4kZ" secondAttribute="trailing" constant="8" id="dtE-nr-mYv"/>
+                            <constraint firstItem="qmL-EZ-4kZ" firstAttribute="trailing" secondItem="yEq-7b-Yjw" secondAttribute="trailing" constant="20" id="eFc-GK-vJD"/>
+                            <constraint firstItem="LtT-Sr-coa" firstAttribute="leading" secondItem="qmL-EZ-4kZ" secondAttribute="leading" constant="8" id="gFY-gB-HoX"/>
+                            <constraint firstItem="qmL-EZ-4kZ" firstAttribute="bottom" secondItem="VRP-dE-U5v" secondAttribute="bottom" constant="8" id="o4j-Nt-T3H"/>
+                            <constraint firstItem="qmL-EZ-4kZ" firstAttribute="trailing" secondItem="LtT-Sr-coa" secondAttribute="trailing" constant="8" id="qy1-uX-cj6"/>
+                            <constraint firstItem="yEq-7b-Yjw" firstAttribute="leading" secondItem="qmL-EZ-4kZ" secondAttribute="leading" constant="20" id="rr0-4H-IW9"/>
+                            <constraint firstItem="kw8-VZ-HGZ" firstAttribute="top" secondItem="yEq-7b-Yjw" secondAttribute="bottom" constant="8" id="trF-FS-Z39"/>
+                            <constraint firstItem="qmL-EZ-4kZ" firstAttribute="trailing" secondItem="VRP-dE-U5v" secondAttribute="trailing" constant="8" id="yTj-HG-yAp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qmL-EZ-4kZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="recordChangeDateLabel" destination="ZcJ-rL-9Gi" id="nI3-eF-sej"/>
+                        <outlet property="recordImage" destination="yEq-7b-Yjw" id="5Wn-cz-hr0"/>
+                        <outlet property="recordNameLabel" destination="9pH-xG-T9K" id="QGO-hq-36c"/>
+                        <outlet property="recordNameTextField" destination="IPV-eZ-gcx" id="JfE-7f-HZA"/>
+                        <outlet property="recordTextTextView" destination="kw8-VZ-HGZ" id="GXD-6d-FJd"/>
+                        <outlet property="saveButton" destination="VRP-dE-U5v" id="9Ui-tk-AlX"/>
+                        <outlet property="textViewBottomConstraint" destination="26r-el-aFt" id="DQ1-7z-JF5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rM5-ab-QZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="-84.107946026986511"/>
+        </scene>
+    </scenes>
+</document>
