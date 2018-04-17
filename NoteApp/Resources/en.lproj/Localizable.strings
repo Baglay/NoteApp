@@ -1,0 +1,17 @@
+"settings.button.title" = "Settings";
+"record.new.nameNoteLabel.title" = "Enter the note name";
+"record.new.texNoteLabel.title" = "Enter the note text";
+"record.settings.saveButton.title" = "Save";
+"record.settings.storageSegmentedControl.userdefaults.title" = "UserDefaults";
+"record.settings.storageSegmentedControl.keychain.title" = "KeyChain";
+"record.settings.storageSegmentedControl.network.title" = "Network";
+"record.main.deleteButton.title" = "Delete";
+"record.detail.saveButton.title" = "Save";
+"record.detail.changeDateLabel.title" = "Change last date";
+"record.main.alertController.title" = "An error occurred, try upgrading later";
+"record.main.alertController.message" = "error code:";
+"record.main.alertAction.ok.title" = "Ok";
+"record.pasteImage.title" = "Paste image";
+"record.changeImage.title" = "Change image";
+"record.newRecord.error.title" = "Ooops";
+"record.newRecord.error.message" = "You have not filled in all the data";

@@ -1,0 +1,20 @@
+
+"settings.button.title" = "Настройки";
+"record.new.nameNoteLabel.title" = "Введите название заметки";
+"record.new.texNoteLabel.title" = "Введите текст заметки";
+"record.new.refreshButton.title" = "Обновить";
+"record.settings.saveButton.title" = "Сохранить";
+"record.settings.storageSegmentedControl.userdefaults.title" = "Юзердефолтс";
+"record.settings.storageSegmentedControl.keychain.title" = "КейЧейн";
+"record.settings.storageSegmentedControl.network.title" = "Сеть";
+"record.main.deleteButton.title" = "Удалить";
+"record.detail.saveButton.title" = "Сохранить";
+"record.detail.serviceNameButton.title" = "Сервис";
+"record.detail.changeDateLabel.title" = "Дата последнего изменения";
+"record.main.alertController.title" = "Произошла ошибка, попробуйте обновить позднее";
+"record.main.alertController.message" = "Код ошибки:";
+"record.main.alertAction.ok.title" = "Хорошо";
+"record.pasteImage.title" = "Вставить изображение";
+"record.changeImage.title" = "Изменить изоображение";
+"record.newRecord.error.title" = "Упс";
+"record.newRecord.error.message" = "Вы заполнили не все данные";
